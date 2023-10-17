@@ -1,0 +1,29 @@
+[
+    {
+        "id": 1,
+        "organization": "University of Information Technology",
+        "link": "https://www.uit.edu.mm/",
+        "logo": "uit-logo.png",
+        "role": "Software Engineering",
+        "from": "2016",
+        "to": "2024"
+    },
+    {
+        "id": 2,
+        "organization": "Blue Planet Co.,Ltd",
+        "link": "https://blueoceanmm.com/blueplanet.html",
+        "logo": "bp.jpeg",
+        "role": "Jr. Software Engineer",
+        "from": "Apr 2022",
+        "to": "Dec 2022"
+    },
+    {
+        "id": 3,
+        "organization": "Tunyat Co.,Ltd",
+        "link": "https://www.tunyat.com/",
+        "logo": "tunyat.jpeg",
+        "role": "Fullstack Web Developer",
+        "from": "Dec 2022",
+        "to": "Dec 2023"
+    }
+]

@@ -1,0 +1,442 @@
+:root {
+    --primary-color: #14cd80;
+    --dark: #121212;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+html, body {
+    height: 100%;
+}
+
+#root {
+    height: 100%;
+    background: var(--dark);
+    overflow: auto;
+}
+
+.main {
+    padding: 40px 0 80px 0;
+}
+
+.menu-container {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: auto;
+    top: auto;
+    z-index: 2;
+    background-image: linear-gradient(to bottom right, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1));
+    backdrop-filter: blur(20px) brightness(.5);
+}
+
+.menubar {
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: white;
+}
+
+.menu-icon {
+    font-size: 120%;
+    padding: 15px;
+    border-radius: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-text {
+    font-size: 80%;
+    margin: 0;
+    padding-bottom: 5px;
+    text-transform: uppercase;
+    display: none;
+    text-shadow: 1px 1px 10px var(--dark);
+}
+
+.menu-icon:hover {
+    background-color: #2b2a2a;
+}
+
+.menu-text:hover {
+    color: var(--primary-color);
+}
+
+.active-menu {
+    color:  var(--primary-color);
+}
+
+.active-indicator {
+    display: none;
+    width: 20px;
+    height: 5px;
+    border-radius: 30px;
+    background-image: linear-gradient(to bottom right, #b8ffe2, #14cd80);
+    backdrop-filter: blur(5px);
+    animation-name: active-line;
+    animation-duration: .3s;
+}
+
+.home-container {
+    display: flex;
+    flex-direction: column;
+    column-gap: 5%;
+    row-gap: 50px;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.type-writer {
+    padding-right: 5px;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .1em solid rgba(200, 200, 200, 0.5); /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation: 
+        typing 1s steps(40, end),
+        blink-caret .75s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: rgba(200, 200, 200, 0.5); }
+}
+
+@keyframes active-line {
+    0% {
+        width: 0px;
+    }
+
+    100% {
+        width: 20px;
+    }
+}
+
+.home-container * {
+    color: white;
+}
+
+.potrait-img {
+    width: 15em;
+    height: 15em;
+    object-fit: cover;
+
+    border-radius: 100%;
+    border: 2px solid var(--primary-color);
+}
+
+.intro-text {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.section {
+    margin-top: 50px;
+}
+
+.section-heading {
+    color: white;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.intro-title {
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.intro-description {
+    margin: 0;
+    margin-top: 20px;
+    letter-spacing: 2px;
+    line-height: 35px;
+    font-size: 20px;
+}
+
+.title-bold {
+    color: var(--primary-color);
+}
+
+.edu-card {
+    height: 100%;
+    padding: 10px;
+    border-radius: 20px;
+    display: flex;
+    gap: 20px;
+}
+
+.edu-card-info {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.edu-card-img {
+    border-radius: 5px;
+    height: 3em;
+    width: auto;
+}
+
+.cert-card {
+    height: 100%;
+    padding: 20px;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border: 2px solid #252525;
+}
+
+.cert-card-img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 0.5rem;
+}
+
+.cert-card:hover {
+    box-shadow: 1px 1px 10px #252525;
+    transform: scale(1.05);
+    transition: transform .1s linear;
+}
+
+.edu-card-info *, .cert-card * {
+    margin: 0 !important;
+    color: white;
+    font-size: 90%;
+}
+
+.card-title {
+    font-weight: 600;
+}
+
+.card-title:hover {
+    color: var(--primary-color);
+}
+
+.card-text > * {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.skill-wrapper {
+    display: 'flex';
+    flex-direction: column;
+    color: white;
+}
+
+.skill-indicator {
+    position: relative;
+    width: 100%;
+    height: 5px;
+    border-radius: 30px;
+    background-color: #252525;
+}
+
+.skill-percent {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 5px;
+    background-color: var(--primary-color);
+    border-radius: 30px;
+    overflow: hidden;
+    animation: percent .9s;
+}
+
+@keyframes percent {
+    0% {
+        width: 0;
+    }
+}
+
+.info-item {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.info-icon {
+    width: 20px;
+    height: 20px;
+    padding: 10px;
+    border-radius: 100%;
+    color: var(--primary-color) !important;
+    background-color: #252525;
+}
+
+.info-item > * {
+    margin: 0;
+    color: white;
+}
+
+.section-separator {
+    border-top: 1px solid #252525;
+    margin: 70px auto 55px;
+    max-width: 40%;
+    opacity: .50;
+}
+
+.button {
+    width: fit-content;
+    outline: none;
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    border-radius: 30px;
+    cursor: pointer;
+    background-color: transparent;
+    border: 2px solid #252525;
+    transition: background-color .2s;
+}
+
+.button:active {
+    opacity: .9;
+}
+
+.button:hover {
+    background-color: var(--primary-color);
+    /* box-shadow: 2px 2px 10px var(--primary-color); */
+}
+
+.button:focus {
+    outline: none;
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 1000px) {
+    .menu-container {
+        padding: 20px 0 10px 0;
+        bottom: unset;
+        top: 0;
+        left: 0;
+        background-image: unset;
+        backdrop-filter: unset;
+        background-color: var(--dark);
+    }
+
+    .menubar {
+        padding: 10px 0;
+        justify-content: flex-start;
+        align-items: baseline;
+        gap: 60px;
+    }
+
+    .main {
+        padding: 80px 0;
+    }
+
+    .active-indicator {
+        display: unset;
+    }
+
+    .home-container {
+        transform: translateY(50%);
+        flex-direction: row;
+    }
+
+    .potrait-img {
+        width: 30em;
+        height: 30em;
+    }
+
+    .intro-text {
+        align-items: unset;
+        text-align: unset;
+    }
+
+    .menu-icon {
+        display: none;
+    }
+
+    .menu-text {
+        display: unset;
+    }
+
+    .edu-card {
+        justify-content: center;
+    }
+}
+
+/* X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+
+}
+
+/* XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {
+
+}
+
+@media (prefers-color-scheme: dark) { 
+
+}
+
+@media (prefers-color-scheme: light) {
+
+}
+  
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    width: 10px;
+}
+
+*::-webkit-scrollbar-track {
+    background: #515050;
+    padding: 0 10px;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #252525;
+    border-radius: 20px;
+    border: 2px solid #515050;
+}

@@ -1,0 +1,57 @@
+[
+    {
+        "id": 1,
+        "name": "JavaScript",
+        "percent": 75
+    },
+    {
+        "id": 2,
+        "name": "NodeJS",
+        "percent": 75
+    },
+    {
+        "id": 3,
+        "name": "ExpressJs",
+        "percent": 90
+    },
+    {
+        "id": 4,
+        "name": "Laravel",
+        "percent": 40
+    },
+    {
+        "id": 5,
+        "name": "ReactJs",
+        "percent": 65
+    },
+    {
+        "id": 6,
+        "name": "Mongo DB",
+        "percent": 75
+    },
+    {
+        "id": 7,
+        "name": "MySQL",
+        "percent": 55
+    },
+    {
+        "id": 8,
+        "name": "CSS3",
+        "percent": 80
+    },
+    {
+        "id": 9,
+        "name": "JQuery",
+        "percent": 60
+    },
+    {
+        "id": 10,
+        "name": "Git",
+        "percent": 60
+    },
+    {
+        "id": 11,
+        "name": "Basic DevOps",
+        "percent": 40
+    }
+]
