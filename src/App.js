@@ -6,12 +6,14 @@ import MenuItem from './components/MenuItem';
 import { faHome, faUser, faAddressBook } from '@fortawesome/free-solid-svg-icons'
 import Home from './pages/Home';
 import About from './pages/About';
-import Contact from './pages/Contact';
+import Portfolio from './pages/Portfolio';
+import { AnimatePresence } from 'framer-motion'
+import PageTransition from './components/PageTransition';
 
 const menu = Object.freeze({
   HOME: 'home',
   ABOUT: 'about',
-  CONTACT: 'contact'
+  PORTFOLIO: 'portfolio'
 });
 
 function App() {
@@ -22,7 +24,7 @@ function App() {
   }
 
   return (
-      <>
+      <AnimatePresence>
         <div className="menu-container">
           <Container>
             <div className='menubar'>
@@ -39,22 +41,22 @@ function App() {
                 onClick={() => switchMenu(menu.ABOUT)}
               />
               <MenuItem 
-                text='Contact' 
+                text='Portfolio' 
                 icon={ faAddressBook } 
-                isActive={ activeMenu == menu.CONTACT } 
-                onClick={() => switchMenu(menu.CONTACT)}
+                isActive={ activeMenu == menu.PORTFOLIO } 
+                onClick={() => switchMenu(menu.PORTFOLIO)}
               />
             </div>
           </Container>
         </div>
         <Container className='h-100'>
           <div className='main'>
-            { activeMenu == menu.HOME && <Home/> }
-            { activeMenu == menu.ABOUT && <About/> }
-            { activeMenu == menu.CONTACT && <Contact/> }
+            { activeMenu == menu.HOME &&  <PageTransition><Home/></PageTransition> }
+            { activeMenu == menu.ABOUT && <PageTransition><About/></PageTransition> }
+            { activeMenu == menu.PORTFOLIO && <PageTransition><Portfolio/></PageTransition> }
           </div>
         </Container>
-      </>
+      </AnimatePresence>
   );
 }
 

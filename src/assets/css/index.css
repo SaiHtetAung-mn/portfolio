@@ -1,6 +1,10 @@
 :root {
     --primary-color: #14cd80;
     --dark: #121212;
+    --fb-color: #316FF6;
+    --linkedin-color: #0a66c2;
+    --github-color: #0d1117;
+    --phone-color: #0ebe2c;
 }
 
 * {
@@ -99,7 +103,7 @@ html, body {
 .home-container {
     display: flex;
     flex-direction: column;
-    column-gap: 5%;
+    column-gap: 7%;
     row-gap: 50px;
     align-items: center;
     justify-content: center;
@@ -151,8 +155,8 @@ html, body {
 }
 
 .potrait-img {
-    width: 15em;
-    height: 15em;
+    width: 13em;
+    height: 13em;
     object-fit: cover;
 
     border-radius: 100%;
@@ -224,6 +228,7 @@ html, body {
     flex-direction: column;
     gap: 20px;
     border: 2px solid #252525;
+    cursor: pointer;
 }
 
 .cert-card-img {
@@ -309,6 +314,15 @@ html, body {
     color: white;
 }
 
+.contact-icon {
+    padding: 10px;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    background-color: #2b2a2a;
+    transition: background-color .5s;
+}
+
 .section-separator {
     border-top: 1px solid #252525;
     margin: 70px auto 55px;
@@ -340,6 +354,51 @@ html, body {
 
 .button:focus {
     outline: none;
+}
+
+.linkedin-icon:hover {
+    background-color: var(--linkedin-color);
+}
+
+.fb-icon:hover {
+    background-color: var(--fb-color);
+}
+
+.github-icon:hover {
+    background-color: var(--github-color);
+}
+
+.phone-icon:hover {
+    background-color: var(--phone-color);
+}
+
+.slide-in {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #0f0f0f;
+    transform-origin: bottom;
+    z-index: 3;
+}
+
+.slide-out {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #0f0f0f;
+    transform-origin: top;
+    z-index: 3;
+}
+
+.home-btn-gp {
+    display: flex;
+    flex-direction: column;
+    column-gap: 60px;
+    row-gap: 20px;
 }
 
 /* Small devices (landscape phones, 576px and up) */
@@ -385,8 +444,8 @@ html, body {
     }
 
     .potrait-img {
-        width: 30em;
-        height: 30em;
+        width: 25em;
+        height: 25em;
     }
 
     .intro-text {
@@ -402,14 +461,32 @@ html, body {
         display: unset;
     }
 
-    .edu-card {
-        justify-content: center;
+    .home-btn-gp {
+        flex-direction: row;
     }
+
+    /* .edu-card {
+        justify-content: center;
+    } */
 }
 
 /* X-Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
+    /* Works on Chrome, Edge, and Safari */
+    *::-webkit-scrollbar {
+        width: 10px;
+    }
 
+    *::-webkit-scrollbar-track {
+        background: #515050;
+        padding: 0 10px;
+    }
+
+    *::-webkit-scrollbar-thumb {
+        background-color: #252525;
+        border-radius: 20px;
+        border: 2px solid #515050;
+    }
 }
 
 /* XX-Large devices (larger desktops, 1400px and up) */
@@ -423,20 +500,4 @@ html, body {
 
 @media (prefers-color-scheme: light) {
 
-}
-  
-/* Works on Chrome, Edge, and Safari */
-*::-webkit-scrollbar {
-    width: 10px;
-}
-
-*::-webkit-scrollbar-track {
-    background: #515050;
-    padding: 0 10px;
-}
-
-*::-webkit-scrollbar-thumb {
-    background-color: #252525;
-    border-radius: 20px;
-    border: 2px solid #515050;
 }

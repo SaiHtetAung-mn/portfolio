@@ -1,0 +1,11 @@
+[
+    {
+        "id": 1,
+        "organization": "University of Information Technology",
+        "link": "https://www.uit.edu.mm/",
+        "logo": "uit-logo.png",
+        "role": "Software Engineering",
+        "from": "2016",
+        "to": "2024"
+    }
+]
