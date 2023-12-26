@@ -7,7 +7,7 @@ function Portfolio() {
             <Reveal delay={ 0.2 }>
                 <h2 className="section-heading">My Works</h2>
             </Reveal>
-            <div className="row" style={{ columnGap: "50px" }}>
+            <div className="row" style={{ rowGap: "30px" }}>
                 <div className="col-sm-12 col-md-6 col-lg-4">
                     <Reveal delay={ 0.4 }>
                         <div className="cert-card">
