@@ -1,5 +1,5 @@
 import React from 'react';
-import MyPortraitPhoto from '../assets/image/me-dark.jpg'
+import MyPortraitPhoto from "../assets/image/profile-dark.png"
 import Reveal from '../components/Reveal';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPhone, faDownload } from '@fortawesome/free-solid-svg-icons'
